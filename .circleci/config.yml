@@ -9,7 +9,7 @@ jobs:
       - sfdx/install
       - run:
           command: >-
-            cat $AUTH_URL > authFile.json
+            echo $AUTH_URL > authFile.json
           name: Create Auth File
       - run:
           command: >-
