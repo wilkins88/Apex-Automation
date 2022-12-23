@@ -9,11 +9,11 @@ jobs:
       - sfdx/install
       - run:
           command: >-
-            echo ${AUTH_URL} > authFile.json
+            echo ${AUTH_URL} > authFile.txt
           name: Create Auth File
       - run:
           command: >-
-            sfdx auth:sfdxurl:store -f authFile.json
+            sfdx auth:sfdxurl:store -f authFile.txt
           name: Authorize Devhub
       - run:
           command: >-
