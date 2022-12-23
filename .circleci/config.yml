@@ -13,7 +13,7 @@ jobs:
           name: Create Auth File
       - run:
           command: >-
-            sfdx auth:sfdxurl:store -f authFile.txt
+            sfdx auth:sfdxurl:store -f authFile.txt --setdefaultdevhubusername
           name: Authorize Devhub
       - run:
           command: >-
