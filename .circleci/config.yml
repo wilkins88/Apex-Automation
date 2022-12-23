@@ -7,8 +7,14 @@ jobs:
     steps:
       - checkout
       - sfdx/install
-      - sfdx/auth:
-          defaultusername: admin@apexlibs.com.devhub
+      - run:
+          command: >-
+            echo ${AUTH_URL} > authFile.txt
+          name: Create Auth File
+      - run:
+          command: >-
+            sfdx auth:sfdxurl:store -f authFile.txt --setdefaultdevhubusername
+          name: Authorize Devhub
       - run:
           command: >-
             sfdx force:org:create -f ./config/project-scratch-def.json -a ${CIRCLE_PROJECT_REPONAME}-${CIRCLE_BRANCH}
@@ -35,4 +41,5 @@ jobs:
 workflows:
   validate:
     jobs:
-      - test_in_scratch
+      - test_in_scratch:
+          context: Salesforce Development
