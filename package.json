@@ -14,7 +14,7 @@
     "prettier:verify": "prettier --list-different \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
     "postinstall": "husky install",
     "precommit": "lint-staged",
-    "docs:apex": "apexdocs-generate -s force-app -t docs/apex -p global",
+    "docs:apex": "apexdocs-generate -s force-app -t docs/apex -p public",
     "package:version": "sfdx force:package:version:create -p SFA -d force-app --wait 10 -v admin@apexlibs.com.devhub -x -c",
     "package:promote": "sfdx force:package:version:promote"
   },
