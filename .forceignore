@@ -11,6 +11,9 @@ node_modules
 **/.eslintrc.json
 
 force-app/main/default/profiles
+force-app/main/default/applications
+force-app/main/default/flexipages
+
 
 # LWC Jest
 **/__tests__/**
