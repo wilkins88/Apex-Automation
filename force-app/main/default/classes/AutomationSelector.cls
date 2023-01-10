@@ -8,7 +8,7 @@ public inherited sharing class AutomationSelector {
   @TestVisible
   private static final String QUERY_STRING =
     'SELECT ApiName__c, AutomationType__c FROM SObjectAutomationHandler__mdt WHERE ' +
-    'IsActive__c = true AND {0} = {1}';
+    'IsActive__c = true AND {0} = {1} ORDER BY Priority__c ASC NULLS LAST';
 
   /**
    * @description Returns active automation config for the provided sobject type
