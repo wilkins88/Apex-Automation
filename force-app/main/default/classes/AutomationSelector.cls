@@ -8,7 +8,7 @@ public inherited sharing class AutomationSelector {
   @TestVisible
   private static final String QUERY_STRING =
     'SELECT ApiName__c, AutomationType__c FROM SObjectAutomationHandler__mdt WHERE ' +
-    'IsActive = true AND {0} = \'{1}\'';
+    'IsActive__c = true AND {0} = {1}';
 
   /**
    * @description Returns active automation config for the provided sobject type
@@ -26,7 +26,9 @@ public inherited sharing class AutomationSelector {
         QUERY_STRING,
         new List<String>{
           this.getRelationshipApiName(op),
-          String.valueOf(sObjType)
+          '\'' +
+          String.valueOf(sObjType) +
+          '\''
         }
       )
     );
