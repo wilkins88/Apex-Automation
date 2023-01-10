@@ -43,7 +43,7 @@
     ],
     "**/*.cls": [
       "npm run docs:apex",
-      "git add docs"
+      "git add ./docs"
     ]
   }
 }

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AfterUpdate__c</fullName>
+    <description
+  >The SObject subscriber to register this handler with for after update contexts.</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText
+  >The SObject subscriber to register this handler with for after update contexts.</inlineHelpText>
+    <label>After Update</label>
+    <referenceTo>SObjectAutomationSubscriber__mdt</referenceTo>
+    <relationshipLabel>After Update handlers</relationshipLabel>
+    <relationshipName>AfterUpdateHandlers</relationshipName>
+    <required>false</required>
+    <type>MetadataRelationship</type>
+    <unique>false</unique>
+</CustomField>
